@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -e
+
+rootfs_directory=$1
+source_directory=$2
+
+mkdir -p ${rootfs_directory}/bin
+mv ${rootfs_directory}/usr/bin/nodejs ${rootfs_directory}/bin/node
+
+## Clean up docs and development tools
+rm -rf ${rootfs_directory}/usr/bin
+rm -rf ${rootfs_directory}/usr/include
+rm -rf ${rootfs_directory}/usr/lib/node_modules
+rm -rf ${rootfs_directory}/usr/share

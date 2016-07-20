@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -e
+
+#yolo
+curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -

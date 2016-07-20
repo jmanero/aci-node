@@ -1,0 +1,8 @@
+libc6
+libgcc1
+libstdc++6
+libreadline6
+libtinfo5
+nodejs
+readline-common
+rlwrap

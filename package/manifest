@@ -1,0 +1,24 @@
+{
+  "acVersion": "0.8.6",
+  "acKind": "ImageManifest",
+  "name": "aci.manero.io/node",
+  "labels": [
+    {
+      "name": "version",
+      "value": "4.4.7+build-1"
+    },
+    {
+      "name": "arch",
+      "value": "amd64"
+    },
+    {
+      "name": "os",
+      "value": "linux"
+    }
+  ],
+  "app": {
+    "exec": [ "/bin/node" ],
+    "user": "0",
+    "group": "0"
+  }
+}

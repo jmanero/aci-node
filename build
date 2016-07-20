@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+set -e
+__dirname=$(cd $(dirname $0); pwd -P)
+
+if [[ ! -x $(which apt-get) ]]; then
+  echo "This build requires an environment with apt-get!"
+  echo "Try running the included Vagrantfile with: vagrant up"
+  exit 1
+fi
+
+## Fetch the builder script and actool
+mkdir -p ${__dirname}/bin
+
+pushd ${__dirname}/bin
+rm -f actool-v0.8.6.tar.gz
+wget -q https://github.com/jmanero/appc-spec/releases/download/v0.8.6/actool-v0.8.6.tar.gz
+tar -xvzf actool-v0.8.6.tar.gz
+popd
+
+${__dirname}/bin/package2aci '/vagrant/package' 'node-4.4.7+build-1'
