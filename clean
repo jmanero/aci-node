@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -e
+__dirname=$(cd $(dirname $0); pwd -P)
+
+rm -rf ${__dirname}/package/.build
+rm -rf ${__dirname}/package/*.aci
+rm -rf ${__dirname}/package/*.aci.asc
